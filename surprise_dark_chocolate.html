@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Surprise Link</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      color: #222;
+      text-align: center;
+    }
+
+    .box {
+      padding: 30px;
+    }
+
+    #surpriseLink {
+      font-size: 26px;
+      color: #0066cc;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    #surprise {
+      display: none;
+      animation: fadeIn 0.8s ease-in-out;
+    }
+
+    .chocolate {
+      font-size: 110px;
+      margin-bottom: 15px;
+    }
+
+    .msg {
+      font-size: 30px;
+      font-weight: bold;
+      color: #3b1f14;
+    }
+
+    .sub {
+      font-size: 20px;
+      margin-top: 10px;
+      color: #5c3528;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.8); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box" id="start">
+    <a id="surpriseLink">Click pannunga, ungaluku pidicha onnu kidaikum 🎁</a>
+  </div>
+
+  <div class="box" id="surprise">
+    <div class="chocolate">🍫</div>
+    <div class="msg">Dark Chocolate for You!</div>
+    <div class="sub">Surprise! Idhu unga favorite treat 😄</div>
+  </div>
+
+  <script>
+    document.getElementById("surpriseLink").addEventListener("click", function() {
+      document.getElementById("start").style.display = "none";
+      document.body.style.background = "#fff3e8";
+      document.getElementById("surprise").style.display = "block";
+    });
+  </script>
+
+</body>
+</html>
